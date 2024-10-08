@@ -4,9 +4,9 @@
 
 ### Schedule
 
-- HW: No required, but good practice
-- Quiz: start from Oct.12th, from 9am to 9pm. Lowest one drop
-- Exam: Mid 1 on week 6 Monday; Mid 2 on week 10 Wed; Final Wed, Dec 11, 4:00-6:00pm
+- Homework: No required, but good practice
+- Quiz: start from Oct.12th, from 9 am to 9 pm. Lowest one drop
+- Exam: Mid 1 on week 6 Monday; Mid 2 on week 10 Wed; Final Wed, Dec 11, 4:00-6:00 pm
 
 ## Week 1
 
@@ -18,7 +18,7 @@
 - **carbon composition resistor**: carbon powder mixed with a binding resin or plastic, formed into a cylindrical shape and the ratio of carbon to the binder determines the resistance.
 - **carbon file resistor**: ceramic core with a thin carbon file deposited around it. The thickness of the carbon file or cutting a helical groove in the file (width and length) control the resistance.
 - **metal file and metal oxide resistor**: ceramic core with a thin metal film or metal oxide layer. The shape of the film determine the resistance
-- **wire-wound resistor**: The main resistive component of nichrome wire (resistive alloy) around a ceramic core. handle more current and dissipate more heat due to its high resistance per unit length, hign melting point and thermal stability (resistance does not very significantly with temperature). The resistance is controled by length, diameter of num of turns of the wire
+- **wire-wound resistor**: The main resistive component of nichrome wire (resistive alloy) around a ceramic core. handle more current and dissipate more heat due to its high resistance per unit length, high melting point and thermal stability (resistance does not very significantly with temperature). The resistance is controlled by length, diameter of number of turns of the wire
 - film: thin layer or coating
 
 ### Physical Concept
@@ -48,10 +48,10 @@
 	- Symbol: $\sigma$
 	- Latex Name: `\sigma`
 	- Unit:
-		- Simens per meter
+		- Siemens per meter
 		- $S/m$
 
-- **Power**: the amout of energy transfered per unit time
+- **Power**: the amount of energy transferred per unit time
 	- Symbol: $P$
 	- Unit:
 		- Watt
@@ -82,9 +82,9 @@
 
 ### Common Material & Their Resistivity
 
-Copper (Cu): 1.7e-8 $\Omega \cdot m$ -> conductor
-Nichrome (Ni & Chrome Alloy): 1.1e-6 $\Omega \cdot m$ -> resistor, heater
-Graphite (Carbon): 1e-5 $\Omega \cdot m$ -> More resistant, electrode material
+Copper (Cu): $1.7 \times 10 ^ {-8}\Omega \cdot m$ -> conductor
+Ni-chrome (Ni & Chrome Alloy): $1.1 \times 10 ^{-6}\Omega \cdot m$ -> resistor, heater
+Graphite (Carbon): $10 ^ {-5} \Omega \cdot m$ -> More resistant, electrode material
 
 ### Conductivity $\sigma$ Expression
 
@@ -97,7 +97,7 @@ The flow of charged particles in a conductive material form the flow of electric
 	- $A/m^2$
 
 - Elementary Charge $q$
-	- The charge of a single carrier; electron = -1.6e-19; hole = 1.6e-19
+	- The charge of a single carrier; electron $= -1.6 \times 10 ^{-19}C$; hole $= 1.6 \times 10 ^ {19} C$
 	- Coulombs
 	- $C$
 
@@ -131,7 +131,7 @@ $$m \frac{d\mathbf{v}_d}{dt} = -e \mathbf{E} - m \frac{\mathbf{v}_d}{\tau}$$
 - Electric force $-e \mathbf{E}$
 	- Accelerate the charge carrier
 	- The charge of an electron $-e$
-		- -1.6e-19 $C$
+		- $-1.6 \times 10 ^ {-19} C$
 	
 	- The electric field applied across the conductor $\mathbf{E}$
 		- Vole per meter $V/m$
@@ -139,7 +139,7 @@ $$m \frac{d\mathbf{v}_d}{dt} = -e \mathbf{E} - m \frac{\mathbf{v}_d}{\tau}$$
 
 - Acceleration Force $m \frac{d\mathbf{v}_d}{dt}$
 	- Mass of the charge carrier $m$
-		- typically is an election: 9.11e-31
+		- typically is an election: $9.11 \times 10 ^ {-31} kg$
 		- kilogram
 		- $kg$
 	
@@ -171,17 +171,17 @@ $$\mathbf{J} = \frac{e^2 n \tau}{m} \mathbf{E}$$
 
 - The current density $\mathbf{J}$ is directly proportional to the electric field $\mathbf{E}$
 - $\frac{e^2 n \tau}{m}$ is effective a proportionality constant, conductivity $\sigma$
-- This is Ohm's Law in different form: **the current density in proportional to electric field**, with the conductivity $\sigma$ being the porportionality constant.
+- This is Ohm's Law in different form: **the current density in proportional to electric field**, with the conductivity $\sigma$ being the proportionality constant.
 
 $$\sigma = \frac{e^2 n \tau}{m}$$
 
-- $e$ - Elementary charge of an electron (-1.6e-19$C$)
+- $e$ - Elementary charge of an electron ($-1.6 \times 10^{-19}C$)
 - $n$ - Number density of charge carriers in ($m^{-3}$), which represents how many charge carrier are present per unit volume of the material
 - $\tau$ - Relaxation time; average time between collisions between electrons and atoms in the conductor
-- $m$ - Mass of the charge carrier, typically the mass of an electron 9.11e-31$kg$
-- For a given material at constant temperature, $e$, $m$, $\tau$ can be considered as constants togather called **carrier mobility $\mu = \frac{e \tau}{m}$**; $n$, however, can vary based on **doping**; 
+- $m$ - Mass of the charge carrier, typically the mass of an electron $9.11 \times 10 ^ {-31}kg$
+- For a given material at constant temperature, $e$, $m$, $\tau$ can be considered as constants together called **carrier mobility $\mu = \frac{e \tau}{m}$**; $n$, however, can vary based on **doping**; 
 	- higher carrier density allows for a better response to an electric field
-	- carrier density is important to determineing the current-carrying capability and heat dissipation
+	- carrier density is important to determining the current-carrying capability and heat dissipation
 - $\mu$ - Carrier Mobility represents the velocity of a charge carrier per unit electric field applied
 	- the magnitude of the mobility so negative sign is omitted
 	- $$\mathbf{v}_d = -\frac{e \tau}{m} \mathbf{E}=-\mu\mathbf{E}$$
@@ -192,16 +192,16 @@ $$\sigma=nq\mu$$
 
 adding impurities to a pure semiconductor; increase the number of free charge carriers
 
-- dopants: impurity atoms that **replace** some of the silion atoms at lattice position, becoming the part of the crystal structure and long-range order (repeating pattern)
+- dopants: impurity atoms that **replace** some of the silicon atoms at lattice position, becoming the part of the crystal structure and long-range order (repeating pattern)
 	- Long-Range Order in Crystal
-		- Each silicon atom is bonded in a regular tetrahedral structure to four neighboring slicon atms
+		- Each silicon atom is bonded in a regular tetrahedral structure to four neighboring silicon atoms
 		- In a crystal, the atoms are arranged in a periodic structure that repeats in a predictable way over long distance throughout the entire material
 		- each atom has a well-defined position relative to its neighbors
-		- this arrangement extends uniformly accross the crystal lattice
+		- this arrangement extends uniformly across the crystal lattice
 		- results of its electrical, optical, and mechanical characteristic
 - a well-controlled modification of electric properties
 	- Ion implantation - bombarding the silicon crystal with dopant ions at high energy, allows dopant ions to penetrate the crystal and take up positions within the lattice
-	- Diffusion - silicon crystal is exposed to a depant gas at high temperature, allowing the dopant atoms to diffuse into the silicon and replace some silicon
+	- Diffusion - silicon crystal is exposed to a dopant gas at high temperature, allowing the dopant atoms to diffuse into the silicon and replace some silicon
 	- **Human control** over doping lies in the ability to **precisely control the concentration** of dopant atoms, the **depth** to which they penetrate the silicon, and the **uniformity** of their distribution.
 	- **Modern semiconductor manufacturing** is highly advanced and uses tools like **ion implanters** that can precisely control the dose and energy of the dopant ions to achieve a specific **doping profile**.
 	- **Annealing** involves heating the silicon to allow any disruptions in the lattice caused by the introduction of dopant atoms to settle, ensuring that the dopant atoms properly integrate into substitutional positions without causing defects.
