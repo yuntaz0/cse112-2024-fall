@@ -1,5 +1,26 @@
 # Lecture Note
 
+## Formula
+
+- **Resistance**: $$R = \frac{V}{I}$$
+- **Conductance**: $$G = \frac{I}{V} = \frac{1}{R}$$ 
+- **Resistivity**: $$\rho = R \cdot \frac{A}{l}$$
+- **Resistance** in term of resistivity: $$ R = \rho \cdot \frac{l}{A}$$
+	- $\rho$ : material parameter
+	- $L$: length, depends on physical dimension
+	- $A$: area, depends on physical dimension
+
+- **Capacity**: $$C = \frac{Q}{V}$$
+- **Conductivity**: $$\sigma = \frac{1}{\rho} = ne\mu = \frac{e^2 n \tau}{m}$$
+	- reciprocal of resistivity
+
+- **Resistance** in term of conductivity: $$\frac{1}{\sigma} \cdot \frac{l}{A}$$
+- Charge density $\rho$: $$\rho = e \cdot n = q \cdot n$$
+- Current Density $\vec{J}$: $$\vec{J} = \rho \cdot \vec{v_d} = q \cdot n \cdot \vec{v_d} = \frac{I}{A} = \sigma \cdot E $$
+- charge carrier motion: $$m \frac{dv_d}{dt} = -e E - m \frac{v_d}{\tau}$$
+- drift velocity $Vd$: $$v_d = -\frac{e \tau}{m} E$$
+- carrier mobility $\mu$: $$\mu = \frac{e \tau}{m}$$
+
 ## Week 0
 
 ### Schedule
@@ -65,21 +86,6 @@
 		- Farads per meter
 		- $F/m$
 
-### Formula
-
-- Resistance: $$R = \frac{V}{I}$$
-- Resistivity: $$\rho = R \cdot \frac{A}{l}$$
-- Resistance in term of resistivity: $$ R = \rho \cdot \frac{l}{A}$$
-	- $\rho$ : material parameter
-	- $L$: length, depends on physical dimension
-	- $A$: area, depends on physical dimension
-
-- Capacity: $$C = \frac{Q}{V}$$
-- Conductivity: $$\sigma = \frac{1}{\rho}$$
-	- reciprocal of resistivity
-
-- Resistance in term of conductivity: $$\frac{1}{\sigma} \cdot \frac{l}{A}$$
-
 ### Common Material & Their Resistivity
 
 Copper (Cu): $1.7 \times 10 ^ {-8}\Omega \cdot m$ -> conductor
@@ -88,26 +94,31 @@ Graphite (Carbon): $10 ^ {-5} \Omega \cdot m$ -> More resistant, electrode mater
 
 ### Conductivity $\sigma$ Expression
 
-$$\mathbf{J} = \rho \cdot \mathbf{v}_d = q \cdot \mathbf{n} \cdot \mathbf{v}_d = \frac{I}{A}$$
+$$J = \rho \cdot v_d = e \cdot n \cdot v_d = \frac{I}{A}$$
 
 The flow of charged particles in a conductive material form the flow of electric current. 
-- Current Density $\mathbf{J}$
+- Charge density $\rho$
+	- amount of electric charge per unit volume
+	- Coulombs per cubic meter
+	- $C/m^3$
+	
+- Current Density $J$
 	- The amount of electric current flowing through a cross-sectional area (per unit area) of a conductor. *Current per unit area*
 	- Amperes per square meter
 	- $A/m^2$
 
-- Elementary Charge $q$
+- Elementary Charge $q$ or $e$
 	- The charge of a single carrier; electron $= -1.6 \times 10 ^{-19}C$; hole $= 1.6 \times 10 ^ {19} C$
 	- Coulombs
 	- $C$
 
-- Charge Carrier Density $\mathbf{n}$
+- Charge Carrier Density $n$
 	- Number of charge carriers per unit volume in the material
 	- fundamental material property
 	- Number er cubic meter
 	- $m^{-3}$
 
-- Drift Velocity $\mathbf{v}_d$
+- Drift Velocity $v_d$
 	- the average (slow, guided, net, additional to normal, existed random movement) velocity at which charge carriers move through a material when subjected to electric field.
 	- because of collision, electron's drift velocity will sometime drop to 0 and the electron will restart acceleration
 	- Meters per second
@@ -124,30 +135,30 @@ The electric field exerts a **force** on the electron, trying to **accelerate** 
 
 $$F = ma$$
 
-$$m \frac{d\mathbf{v}_d}{dt} + m \frac{\mathbf{v}_d}{\tau}= -e \mathbf{E}$$
+$$-e E = m \frac{dv_d}{dt} + m \frac{v_d}{\tau}$$
 
-$$m \frac{d\mathbf{v}_d}{dt} = -e \mathbf{E} - m \frac{\mathbf{v}_d}{\tau}$$
+$$m \frac{dv_d}{dt} = -e E - m \frac{v_d}{\tau}$$
 
-- Electric force $-e \mathbf{E}$
+- Electric force $-e E$
 	- Accelerate the charge carrier
 	- The charge of an electron $-e$
 		- $-1.6 \times 10 ^ {-19} C$
 	
-	- The electric field applied across the conductor $\mathbf{E}$
+	- The electric field applied across the conductor $E$
 		- Vole per meter $V/m$
 		- Newton per coulomb $N/C$
 
-- Acceleration Force $m \frac{d\mathbf{v}_d}{dt}$
+- Acceleration Force $m \frac{dv_d}{dt}$
 	- Mass of the charge carrier $m$
 		- typically is an election: $9.11 \times 10 ^ {-31} kg$
 		- kilogram
 		- $kg$
 	
-	- Acceleration of the charged carrier $\frac{d\mathbf{v}_d}{dt}$
+	- Acceleration of the charged carrier $\frac{dv_d}{dt}$
 		- $d$: infinitesimal change, how quantity is changing with respect to another
-		- the rate of change of drift velocity ($\mathbf{v}_d$) with respect to time ($t$)
+		- the rate of change of drift velocity ($v_d$) with respect to time ($t$)
 
-- Damping Force $- m \frac{\mathbf{v}_d}{\tau}$
+- Damping Force $- m \frac{v_d}{\tau}$
 	- slow down the charge carrier
 	- resistive force due to collisions between the charged carriers and atoms in the conductor
 	- $\tau$
@@ -156,24 +167,26 @@ $$m \frac{d\mathbf{v}_d}{dt} = -e \mathbf{E} - m \frac{\mathbf{v}_d}{\tau}$$
 
 - The higher $V_d$, the smaller $\frac{dV_d}{dt}$ . So exact drift velocity can be consider as approximate as **steady-state drift velocity**
 
-### Steady-state Drift Velocity ($dt = \tau$)
+### Steady-state Drift Velocity ($\frac{dv_d}{dt} = 0$)
 
-The electric force accelerate the charge carrier and the damping force slowing down the charge carriers reach as balance -> steady-state drift velocity -> $\frac{dV_d}{dt} = 0$, and $V_d$ become a constant.
+- The electric force accelerate the charge carrier and the damping force slowing down the charge carriers reach as balance
+- $\frac{d v_d}{dt} = 0$, and $v_d$ become a constant.
 
-$$m \frac{\mathbf{v}_d}{\tau}= -e \mathbf{E}$$
-$$\mathbf{v}_d = -\frac{e \tau}{m} \mathbf{E}$$
+$$m \frac{v_d}{\tau}= -e E$$
+$$v_d = -\frac{e \tau}{m} E$$
 
-Substitute ${\mathbf{v}_d}$ into the current density equation:
+Substitute ${v_d}$ into the current density equation:
 
-$$\mathbf{J} = \rho \cdot \mathbf{v}_d = q \cdot \mathbf{n} \cdot \mathbf{v}_d$$
-$$\mathbf{J} = (-e) \cdot n \cdot \left( -\frac{e \tau}{m} \mathbf{E} \right)$$
-$$\mathbf{J} = \frac{e^2 n \tau}{m} \mathbf{E}$$
+$$J = \rho \cdot v_d = q \cdot n \cdot v_d$$
+$$J = (-e) \cdot n \cdot \left( -\frac{e \tau}{m} E \right)$$
+$$J = \frac{e^2 n \tau}{m} E$$
 
-- The current density $\mathbf{J}$ is directly proportional to the electric field $\mathbf{E}$
+- The current density $J$ is directly proportional to the electric field $E$
 - $\frac{e^2 n \tau}{m}$ is effective a proportionality constant, conductivity $\sigma$
 - This is Ohm's Law in different form: **the current density in proportional to electric field**, with the conductivity $\sigma$ being the proportionality constant.
 
 $$\sigma = \frac{e^2 n \tau}{m}$$
+$$\vec{J} = \vec{\sigma} \cdot \vec{E}$$
 
 - $e$ - Elementary charge of an electron ($-1.6 \times 10^{-19}C$)
 - $n$ - Number density of charge carriers in ($m^{-3}$), which represents how many charge carrier are present per unit volume of the material
@@ -184,13 +197,13 @@ $$\sigma = \frac{e^2 n \tau}{m}$$
 	- carrier density is important to determining the current-carrying capability and heat dissipation
 - $\mu$ - Carrier Mobility represents the velocity of a charge carrier per unit electric field applied
 	- the magnitude of the mobility so negative sign is omitted
-	- $$\mathbf{v}_d = -\frac{e \tau}{m} \mathbf{E}=-\mu\mathbf{E}$$
-	- $$\mu = \frac{e \tau}{m}=\frac{\mathbf{v_d}}{\mathbf{E}}$$
-$$\sigma=nq\mu$$
+	- $$v_d = -\frac{e \tau}{m} E=-\mu E$$
+	- $$\mu = \frac{e \tau}{m}=\frac{vd}{E}$$
+$$\sigma=ne\mu$$
 	- $q$ - Charge of the carrier
 ### Doping - alter the electrical properties of a semiconductor
 
-adding impurities to a pure semiconductor; increase the number of free charge carriers
+adding impurities to a pure semiconductor; increase **the number of free charge carriers ${n}$**
 
 - dopants: impurity atoms that **replace** some of the silicon atoms at lattice position, becoming the part of the crystal structure and long-range order (repeating pattern)
 	- Long-Range Order in Crystal
@@ -210,9 +223,56 @@ adding impurities to a pure semiconductor; increase the number of free charge ca
 		- purpose is to enhance mechanical properties.
 		- the atoms of the alloying elements are **mixed into** the crystal structure of the base metal, which significantly alters the crystal lattice
 		- the concentration of the alloying elements is much higher compared to doping (x percent)
-- N-type Semiconductor
+
+#### Charge Carriers
+
+- hole concentration $p$, electron concentration $n$
+	- $p \cdot n = {n_i}^2$ where $n_i$ is the number of charge carriers in a unit volume of intrinsic silicon at a given temperature
+	- $n_i$ depends on temperature
+		- $$n_i = B \cdot T ^ {\frac{3}{2}} \cdot e^{\frac{E_g}{2k \cdot T}} \approx 10^{10}$$
+		- At room temperature (300 Kelvin)
+		- $E_g = 1.12eV$
+		- $K = \frac{0.026}{300}ev/Kelvin$
+		- $K \cdot T = 0.026eV$
+- **N-type Semiconductor**
 	- Dopant: an element with more valence electrons that the host
-	- Free carrier: electrons
-- P-type Semiconductor
+	- Concentration of **donor** atom ($N_D$) is *the number of charge carriers of N-type silicon* as the donor atom concentration is much larger than the number of natural charge carriers:$$n_n \simeq N_D \gg n_i$$ 
+	- hence: $$p_n \simeq \frac{n_i^2}{N_D}$$
+	- **Free carrier: electrons**
+- **P-type Semiconductor**
 	- Dopant: an element with fewer valence electrons than the host
-	- Free carrier: holes
+	- Concentration of **acceptor** atom ($N_A$) is the number of charge carriers of P-type silicon as the concentration of acceptor atom is much larger than the number of natural charge carrier: $$p_p \simeq N_A \gg n_i$$
+	- **Free carrier: holes**
+- P and N type semiconductor are both **neutral** $$p_n \cdot n_n = n_i ^ 2$$ $$p_p \cdot n_p = n_i ^ 2$$
+
+### P-N Junction
+
+Connecting the two materials causes creation of a *depletion region* near the boundary, as the free electrons fill the available holes, which in turn allows electric current to pass through the junction only in one direction.
+
+#### Depletion Region - charge carriers that can move are depleted,
+
+
+- How is it form
+	By definition, the N-type semiconductor has an excess of free electrons (in the conduction band compared to the P-type semiconductor, and the P-type has an excess of holes (in the valence band) compared to the N-type. Therefore, when N-doped and P-doped semiconductors are placed together to form a junction, free electrons in the N-side conduction band migrate (diffuse) into the P-side conduction band, and holes in the P-side valence band migrate into the N-side valence band.
+	
+	Following transfer, the diffused electrons come into contact with holes and are eliminated by recombination in the P-side. Likewise, the diffused holes are recombined with free electrons so eliminated in the N-side. The net result is that the diffused electrons and holes are gone. In a N-side region near to the junction interface, free electrons in the conduction band are gone due to (1) the diffusion of electrons to the P-side and (2) recombination of electrons to holes that are diffused from the P-side. Holes in a P-side region near to the interface are also gone by a similar reason. As a result, majority charge carriers (free electrons for the N-type semiconductor, and holes for the P-type semiconductor) are depleted in the region around the junction interface, so this region is called the **depletion region** or **depletion zone**. Due to the majority charge carrier diffusion described above, the depletion region is charged; the N-side of it is positively charged and the P-side of it is negatively charged. This creates an electric field that provides a force opposing the charge diffusion. When the electric field is sufficiently strong to cease further diffusion of holes and electrons, the depletion region reaches the equilibrium. Integrating the electric field across the depletion region determines what is called the **built-in voltage** (also called the junction voltage or barrier voltage or contact potential) around $0.7V$.
+	- **Diffusion**: the movement of electrons and holes from areas of high concentration to areas of low concentration; electron from N-type to P-type and holes from P-type to N-type
+	- **Recombination**: the process where electrons and holes meet in the middle and neutralize each other, leaving behind immobile ions, causing depletion region
+	- **Drift**: the movement of electrons and holes under the influence of the built-in electric field
+- Bias
+	- Forward bias: P-type (currently negative) is applied positive voltage and N-type (currently positive) is applied negative voltage; the external voltage is opposite of built-in voltage
+		- Depletion region is reduced
+		- Lower potential barrier 
+		- **Most** electron can pass through
+	- Reverse bias: P-type (currently negative) is applied negative voltage and N-type (currently positive) is applied positive voltage; the external voltage is reinforcing built-in voltage
+		- Depletion region is widen
+		- Increase potential barrier
+		- **Few** electron can pass through
+- 0 State: depletion layer
+- 1 State: depletion layer is overcome by added voltage 
+	
+#### Diode - P-N junction in circuit
+
+$$I_d(V_d) = I_s(e^{\frac{V_d}{V_T}}-1)$$
+- ―⯈⊢
+- `2015`, `2bc8`, `22a2`
