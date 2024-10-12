@@ -198,9 +198,12 @@ $$\vec{J} = \vec{\sigma} \cdot \vec{E}$$
 - $\mu$ - Carrier Mobility represents the velocity of a charge carrier per unit electric field applied
 	- the magnitude of the mobility so negative sign is omitted
 	- $$v_d = -\frac{e \tau}{m} E=-\mu E$$
+	- $$v_{\text{p-drift}} = \mu E$$
+	
 	- $$\mu = \frac{e \tau}{m}=\frac{vd}{E}$$
 $$\sigma=ne\mu$$
 	- $q$ - Charge of the carrier
+
 ### Doping - alter the electrical properties of a semiconductor
 
 adding impurities to a pure semiconductor; increase **the number of free charge carriers ${n}$**
@@ -227,6 +230,10 @@ adding impurities to a pure semiconductor; increase **the number of free charge 
 #### Charge Carriers
 
 - hole concentration $p$, electron concentration $n$
+- intrinsic carrier concentration $n_i$
+	- because every electron that is thermally excited from the valence band to the conduction band leaves behind a hole
+		- $$n = p = n_i$$
+		- electrons are constantly being thermally excited from the valence band to the conduction band, creating electron-hole pairs. At the same time, electrons in the conduction band recombine with holes in the valence band. The rates of generation and recombination are balanced in thermal equilibrium.
 	- $p \cdot n = {n_i}^2$ where $n_i$ is the number of charge carriers in a unit volume of intrinsic silicon at a given temperature
 	- $n_i$ depends on temperature
 		- $$n_i = B \cdot T ^ {\frac{3}{2}} \cdot e^{\frac{E_g}{2k \cdot T}} \approx 10^{10}$$
@@ -237,13 +244,70 @@ adding impurities to a pure semiconductor; increase **the number of free charge 
 - **N-type Semiconductor**
 	- Dopant: an element with more valence electrons that the host
 	- Concentration of **donor** atom ($N_D$) is *the number of charge carriers of N-type silicon* as the donor atom concentration is much larger than the number of natural charge carriers:$$n_n \simeq N_D \gg n_i$$ 
-	- hence: $$p_n \simeq \frac{n_i^2}{N_D}$$
+	- hence: $$p_n \simeq \frac{{n_i}^2}{N_D}$$
 	- **Free carrier: electrons**
 - **P-type Semiconductor**
 	- Dopant: an element with fewer valence electrons than the host
 	- Concentration of **acceptor** atom ($N_A$) is the number of charge carriers of P-type silicon as the concentration of acceptor atom is much larger than the number of natural charge carrier: $$p_p \simeq N_A \gg n_i$$
 	- **Free carrier: holes**
-- P and N type semiconductor are both **neutral** $$p_n \cdot n_n = n_i ^ 2$$ $$p_p \cdot n_p = n_i ^ 2$$
+- P and N type semiconductor are both **neutral** 
+- **Law of mass action**: under thermal equilibrium, the product of the free electron concentration $n$ and the free hole concentration $p$ is equal to a constant square of intrinsic carrier concentration $n$. The intrinsic carrier concentration is a function of temperature.
+	- $$p \cdot n = {n_i}^2$$
+	- $$p_n \cdot n_n = n_i ^ 2$$
+	- $$p_p \cdot n_p = n_i ^ 2$$
+
+##### Key Factors Balancing Carriers
+
+1. **Thermal Generation and Recombination**:
+    - In a semiconductor, free electrons and holes are continuously generated and recombine. At equilibrium, the rate of thermal generation of electron-hole pairs is exactly balanced by the recombination rate.
+    - Doping increases the concentration of one type of carrier (either electrons for n-type or holes for p-type). However, the presence of more electrons (for example) increases the **recombination rate** because **more free electrons are available to recombine with holes**. This increased recombination reduces the number of holes, so the product $n \cdot p$ remains constant at ${n_i}^2$​.
+2. **Fermi Level Shift**:
+    - Doping changes the **Fermi level**, which is a measure of the probability that energy states are occupied by electrons.
+    - In **n-type** semiconductors, the Fermi level moves closer to the conduction band, increasing the number of electrons $n$. Because the Fermi level moves, it decreases the probability of finding electrons in the valence band, which results in fewer holes $p$.
+    - In **p-type** semiconductors, the Fermi level moves closer to the valence band, increasing the hole concentration $p$ and reducing the electron concentration $n$.
+    - The shift in Fermi level is a key factor that causes an inverse relationship between the concentrations of electrons and holes, ensuring that $n \cdot p$ stays balanced.
+3. **Exponential Dependence on Energy Gap**:
+    - The concentration of carriers (both electrons and holes) is **exponentially dependent** on the difference between the Fermi level and the energy band edges (conduction band for electrons, valence band for holes).
+    - This means that a small shift in the Fermi level (due to doping) causes a large change in the concentration of electrons or holes.
+    - Because of this exponential relationship, when one carrier type increases due to doping, the other carrier type decreases exponentially, which helps maintain the equilibrium condition $n⋅p=n_i^2​$.
+
+###### Understanding the Balance Mechanism
+
+Let’s use **n-type doping** as an example:
+
+- When donor atoms are introduced, they contribute extra free electrons to the conduction band, increasing $n$. However, these additional electrons increase the likelihood of recombination with holes.
+- As electrons recombine with holes more frequently, the hole concentration $p$ decreases. The material cannot support an unlimited increase in free electrons without reducing the hole concentration because the two types of carriers recombine.
+- Since $n \cdot p$ must remain equal to $n_i^2$​, if $n$ increases due to doping, $p$ must decrease proportionally to maintain the equilibrium.
+
+The same explanation applies to **p-type doping**, where the introduction of acceptor atoms increases the hole concentration $p$, causing a reduction in the electron concentration $n$ to balance the equation.
+
+###### Summary
+
+In either case (n-type or p-type), the balance between the increase in one type of carrier and the decrease in the other is governed by the following mechanisms:
+
+- Increased recombination due to higher carrier concentrations.
+- Shifts in the Fermi level that alter the relative concentrations of electrons and holes.
+- The exponential relationship between carrier concentration and energy levels.
+
+### Current density $J$ in Other Form
+
+Previously,
+
+- $$v_d = -\frac{e \tau}{m} E=-\mu E$$
+- $$J = \rho \cdot v_d = q \cdot n \cdot v_d$$
+
+Now,
+- $$v_{\text{p-drift}} = \mu E$$
+- $$v_{\text{n-drift}} = -\mu E$$
+
+- P-Type
+	- where $e = q$ (magnitude of electron charge) and $n = p$ (the concentration of charged carrier):
+	
+	- For positive charge carriers: $$J_p = \frac{I_p}{A} = qp \mu _p E$$
+	- For negative charge carriers: $$J_p = \frac{I_p}{A} = qn \mu _n E$$
+	- Total drift current density: $$J = J_p + J_n = q(p \mu _p +n \mu_n)E = \sigma E = \frac{E}{\rho}$$
+	- Conductivity: $$\sigma = q(p \mu _p +n \mu_n)$$
+	- Resistivity: $$\rho = \frac{E}{J} = \frac{1}{q(p \mu _p +n \mu_n)}$$
 
 ### P-N Junction
 
