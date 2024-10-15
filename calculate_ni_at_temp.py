@@ -6,7 +6,7 @@ import argparse
 
 # Function to calculate intrinsic carrier concentration
 def N_i(T, E_g=1.12):
-    B = 7.3e15  # Material-dependent constant
+    B = 1.66e15  # Material-dependent constant
     k = 8.62e-5  # Boltzmann constant in eV/K
     n_i = B * T ** (1.5) * np.exp(-E_g / (2 * k * T))  # Intrinsic carrier concentration
     return n_i

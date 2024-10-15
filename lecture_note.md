@@ -297,14 +297,14 @@ Previously,
 - $$J = \rho \cdot v_d = q \cdot n \cdot v_d$$
 
 Now,
-- $$v_{\text{p-drift}} = \mu E$$
-- $$v_{\text{n-drift}} = -\mu E$$
+- $$v_{\text{p-drift}} = \mu_p E$$
+- $$v_{\text{n-drift}} = -\mu_n E$$
 
 - P-Type
 	- where $e = q$ (magnitude of electron charge) and $n = p$ (the concentration of charged carrier):
 	
 	- For positive charge carriers: $$J_p = \frac{I_p}{A} = qp \mu _p E$$
-	- For negative charge carriers: $$J_p = \frac{I_p}{A} = qn \mu _n E$$
+	- For negative charge carriers: $$J_n = \frac{I_n}{A} = qn \mu _n E$$
 	- Total drift current density: $$J = J_p + J_n = q(p \mu _p +n \mu_n)E = \sigma E = \frac{E}{\rho}$$
 	- Conductivity: $$\sigma = q(p \mu _p +n \mu_n)$$
 	- Resistivity: $$\rho = \frac{E}{J} = \frac{1}{q(p \mu _p +n \mu_n)}$$
