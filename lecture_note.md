@@ -202,7 +202,7 @@ $$\vec{J} = \vec{\sigma} \cdot \vec{E}$$
 	
 	- $$\mu = \frac{e \tau}{m}=\frac{vd}{E}$$
 $$\sigma=ne\mu$$
-	- $q$ - Charge of the carrier
+	- $q$ - Charge of the carrie
 
 ### Doping - alter the electrical properties of a semiconductor
 
