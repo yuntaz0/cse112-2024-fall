@@ -11,6 +11,8 @@ def num_carrier(doping_concentration, ni=1.5e10):
 def main():
     # Parse command-line arguments
     parser = argparse.ArgumentParser(description="Calculate the number of charge carriers based on doping concentration.")
+    
+    # Required positional argument for doping concentration
     parser.add_argument('doping_concentration', type=float, help='Doping concentration (e.g., 1e17)')
     parser.add_argument('--ni', type=float, default=None, help='Intrinsic carrier concentration (default is 1.5e10 for silicon at 300K)')
 
