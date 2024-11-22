@@ -1,11 +1,27 @@
 # Lecture Note
 
+## Unit
+
+| Prefix | Symbol | Power of 10 | Example                                 |
+| ------ | ------ | ----------- | --------------------------------------- |
+| Tera   | T      | $10^{12}$   | 1 terawatt (TW) = $10^{12}$ watts       |
+| Giga   | G      | $10^{9}$    | 1 gigahertz (GHz) = $10^9$ hertz        |
+| Mega   | M      | $10^{6}$    | 1 megabyte (MB) = $10^6$ bytes          |
+| Kilo   | k      | $10^{3}$    | 1 kilometer (km) = $10^3$ meters        |
+| -      | -      | $10^{0}$    | 1 meter (m) = $10^0$ meters             |
+| Milli  | m      | $10^{-3}$   | 1 millivolt (mV) = $10^{-3}$ volts      |
+| Micro  | µ      | $10^{-6}$   | 1 microfarad (µF) = $10^{-6}$ farads    |
+| Nano   | n      | $10^{-9}$   | 1 nanometer (nm) = $10^{-9}$ meters     |
+| Pico   | p      | $10^{-12}$  | 1 picofarad (pF) = $10^{-12}$ farads    |
+| Femto  | f      | $10^{-15}$  | 1 femtoampere (fA) = $10^{-15}$ amperes |
+| Atto   | a      | $10^{-18}$  | 1 attosecond (as) = $10^{-18}$ seconds  |
+
 ## Formula
 
 - **Resistance**: $$R = \frac{V}{I}$$
 - **Conductance**: $$G = \frac{I}{V} = \frac{1}{R}$$ 
 - **Resistivity**: $$\rho = R \cdot \frac{A}{l}$$
-- **Resistance** in term of resistivity: $$ R = \rho \cdot \frac{l}{A}$$
+- **Resistance** in term of resistivity: $$R = \rho \cdot \frac{l}{A}$$
 	- $\rho$ : material parameter
 	- $L$: length, depends on physical dimension
 	- $A$: area, depends on physical dimension
@@ -335,8 +351,31 @@ Connecting the two materials causes creation of a *depletion region* near the bo
 - 0 State: depletion layer
 - 1 State: depletion layer is overcome by added voltage 
 	
-#### Diode - P-N junction in circuit
+## Diode - P-N junction in circuit
 
 $$I_d(V_d) = I_s(e^{\frac{V_d}{V_T}}-1)$$
 - ―⯈⊢
 - `2015`, `2bc8`, `22a2`
+
+## MOSFET
+
+### NMOS
+
+- $V_{th} = V_{tn}$
+- IF $V_{GS} < V_{th}$ THEN NMOS is in "cutoff" mode: $$I_{DS} = 0$$
+- ELSE IF $V_{GS} \geq V_{th} \quad \text{and} \quad  V_{DS} < V_{GS} - V_{th} \quad \text{or} \quad V_{GD} \gt V_{th}$ THEN NMOS is in **TRIODE** mode: $$I_{DS} = k_n \left((V_{GS} - V_{th}) \times V_{DS} - \frac{1}{2} V_{DS}^2 \right)$$
+- ELSE IF $V_{GS} \geq V_{th} \quad \text{and} \quad V_{DS} \geq V_{GS} - V_{th} \quad \text{or} \quad V_{GD} \leq V_{th}$ THEN NMOS is in **SATURATION** mode: $$I_{DS} = \frac{k_n}{2} (V_{GS} - V_{th})^2$$
+
+### PMOS
+
+- $V_{th} = -V_{tp}$
+- IF $V_{SG} < V_{th}$ THEN PMOS is in "cutoff" mode: $$I_{SD} = 0$$
+- ELSE IF $V_{SG} \geq V_{th} \quad \text{and} \quad  V_{SD} < V_{SG} - V_{th} \quad \text{or} \quad V_{DG} \gt V_{th}$ THEN NMOS is in **TRIODE** mode: $$I_{SD} = k_p \left((V_{SG} - V_{th}) \times V_{SD} - \frac{1}{2} V_{SD}^2 \right)$$
+- ELSE IF $V_{SG} \geq V_{th} \quad \text{and} \quad V_{SD} \geq V_{SG} - V_{th} \quad \text{or} \quad V_{DG} \leq V_{th}$ THEN NMOS is in **SATURATION** mode: $$I_{SD} = \frac{k_p}{2} (V_{SG} - V_{th})^2$$
+
+- Transconductance parameter: $$k = k' \times \frac{W}{L}$$
+$$k'=C_{ox} \times \mu$$
+- Oxide Capacitance per unit area: $$C_{ox} = \frac{\epsilon _{ox}}{t_{ox}} = \frac{\epsilon _r \times \epsilon _0}{t_{ox}} = \frac{3.9 \times 8.854 \times10 ^ {-14}}{t_{ox}}$$
+- $\mu$: electron mobility
+- $W$: Gate width of the transistor
+- $L$: Gate length of the transistor
