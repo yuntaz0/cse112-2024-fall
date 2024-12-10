@@ -1,5 +1,21 @@
 # Lecture Note
 
+## Unit
+
+| Prefix | Symbol | Power of 10 | Example                                 |
+| ------ | ------ | ----------- | --------------------------------------- |
+| Tera   | T      | $10^{12}$   | 1 terawatt (TW) = $10^{12}$ watts       |
+| Giga   | G      | $10^{9}$    | 1 gigahertz (GHz) = $10^9$ hertz        |
+| Mega   | M      | $10^{6}$    | 1 megabyte (MB) = $10^6$ bytes          |
+| Kilo   | k      | $10^{3}$    | 1 kilometer (km) = $10^3$ meters        |
+| -      | -      | $10^{0}$    | 1 meter (m) = $10^0$ meters             |
+| Milli  | m      | $10^{-3}$   | 1 millivolt (mV) = $10^{-3}$ volts      |
+| Micro  | µ      | $10^{-6}$   | 1 microfarad (µF) = $10^{-6}$ farads    |
+| Nano   | n      | $10^{-9}$   | 1 nanometer (nm) = $10^{-9}$ meters     |
+| Pico   | p      | $10^{-12}$  | 1 picofarad (pF) = $10^{-12}$ farads    |
+| Femto  | f      | $10^{-15}$  | 1 femtoampere (fA) = $10^{-15}$ amperes |
+| Atto   | a      | $10^{-18}$  | 1 attosecond (as) = $10^{-18}$ seconds  |
+
 ## Resistor to Semiconductor
 
 - **Resistance**: $$R = \frac{V}{I}$$
