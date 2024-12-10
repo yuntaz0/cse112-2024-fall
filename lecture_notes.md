@@ -413,7 +413,7 @@ Connecting p-type and n-type semiconductor causes creation of a **depletion regi
 
 - **p-n junction**: The diode consists of a p-type semiconductor joined with an n-type semiconductor.
 - **Depletion region**: At the junction, electrons and holes combine, creating a depletion region that acts as a barrier to current flow.
-- **Forward bias**: When a positive voltage is applied to the p-side relative to the n-side, the depletion region shrinks, and current flows.
+- **Forward bias**: When a positive voltage is applied to the p-side relative to the n-side, the depletion region shrinks, and current flows. The positive voltage must be higher than the threshold voltage ($0.7V$), and it takes threshold voltage to conquer the threshold voltage.
 - **Reverse bias**: When a negative voltage is applied to the p-side, the depletion region widens, blocking current flow.
 
 ### Operation
@@ -423,7 +423,7 @@ Connecting p-type and n-type semiconductor causes creation of a **depletion regi
 
 ### Key Equations
 
-- **Current-voltage relationship**: I=Is(eqVkT−1)I = I_s \left( e^{\frac{qV}{kT}} - 1 \right)I=Is​(ekTqV​−1) where IsI_sIs​ is the saturation current, qqq is the electron charge, VVV is the applied voltage, kkk is Boltzmann's constant, and TTT is temperature.
+- **Current-voltage relationship**: $I = I_s \left( e^{\frac{qV}{kT}} - 1 \right)$ where $I_s$​ is the saturation current, $q$ is the electron charge, $V$ is the applied voltage, $k$ is Boltzmann's constant, and $T$ is temperature.
 
 ### Applications
 
@@ -431,14 +431,17 @@ Connecting p-type and n-type semiconductor causes creation of a **depletion regi
 - **Clamping & Clipping**: Modifies signal waveforms.
 - **Voltage protection**: Prevents reverse current in circuits.
 
----
-
 ## LED (Light Emitting Diode)
 
 ### Function
 
 - A **LED** (Light Emitting Diode) emits **light** (visible or infrared) when a current flows through it.
 - This is due to the recombination of electrons and holes, which releases energy as photons (light) — a process called **electroluminescence**.
+- **Recombination**:
+	- When electrons from the n-side enter the p-side, they recombine with holes in the p-side.
+	- During this recombination, the electrons lose energy because it drops from conductance to valence band.
+	- The energy released from this recombination is emitted as a **photon of light**.
+	- The energy of the emitted photon (and thus the color of the light) depends on the **bandgap** of the material used in the LED.
 
 ### Structure
 
@@ -455,7 +458,7 @@ Connecting p-type and n-type semiconductor causes creation of a **depletion regi
 
 ### Key Equations
 
-- **Photon energy**: E=hν=hcλE = h \nu = \frac{hc}{\lambda}E=hν=λhc​ Where hhh is Planck's constant, ccc is the speed of light, and λ\lambdaλ is the wavelength of light.
+- **Photon energy**: $E_g = h \nu = \frac{hc}{\lambda}$​ Where $E_g$ is bandgap energy, $\nu$ is the frequency of the emitted photon (in Hz), $h$ is Planck's constant, $c$ is the speed of light, and $\lambda$ is the wavelength of light.
 
 ### Applications
 
@@ -463,8 +466,6 @@ Connecting p-type and n-type semiconductor causes creation of a **depletion regi
 - **Displays**: Used in LED TVs, computer screens, and large outdoor displays.
 - **Indicators**: Used in devices like power indicators.
 - **Optoelectronics**: Infrared LEDs are used in remote controls.
-
----
 
 ## Solar Cell
 
