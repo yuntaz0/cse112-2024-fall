@@ -423,7 +423,8 @@ Connecting p-type and n-type semiconductor causes creation of a **depletion regi
 
 ### Key Equations
 
-- **Current-voltage relationship**: $I = I_s \left( e^{\frac{qV}{kT}} - 1 \right)$ where $I_s$​ is the saturation current, $q$ is the electron charge, $V$ is the applied voltage, $k$ is Boltzmann's constant, and $T$ is temperature.
+- **Current-voltage relationship**: $I_d = I_s \left( e^{\frac{V_d}{V_T}} - 1 \right)$ where $I_d$ is the demand current, $I_s$​ is the saturation current, $V_d$ is the applied voltage, $V_T$ is the thermal voltage related to temperature.
+- **ON/OFF Model**: the diode is OFF open circuit if $V_d < V_f$ and is ON if $V_d = 0.7V$ (the diode will only take 0.7 Volt maximum).
 
 ### Applications
 
@@ -442,6 +443,10 @@ Connecting p-type and n-type semiconductor causes creation of a **depletion regi
 	- During this recombination, the electrons lose energy because it drops from conductance to valence band.
 	- The energy released from this recombination is emitted as a **photon of light**.
 	- The energy of the emitted photon (and thus the color of the light) depends on the **bandgap** of the material used in the LED.
+- $V_f$ for LED
+	- Si diode: $V_f \approx 0.7V$ for $I_d$ in the range of $1-10mA$.
+	- Red LED: $V_f \approx 2V$ for $I_d$ in the range of $1-10mA$.
+	- Blue LED: $V_f \approx 3V$ for $I_d$ in the range of $1-10mA$.
 
 ### Structure
 
